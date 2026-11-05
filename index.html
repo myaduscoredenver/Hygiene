@@ -1,5 +1,48 @@
 <!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>7794 Hygiene | Property Intelligence</title><style>
 :root{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:#203027;background:#f4f5f0}*{box-sizing:border-box}body{margin:0}header{background:#142a25;color:#fff;padding:22px max(22px,calc((100vw - 1240px)/2));display:flex;justify-content:space-between;align-items:center;gap:16px}header small{color:#c0d5ca;letter-spacing:.15em}h1{font-size:30px;margin:7px 0 0}h2{font-size:23px;margin:0 0 15px}h3{margin:0 0 8px}.muted{color:#6b7770}.wrap{max-width:1240px;margin:auto;padding:24px 18px 70px}nav{display:flex;gap:7px;overflow:auto;padding:0 0 20px}nav button{white-space:nowrap}.panel{background:#fff;border:1px solid #dfe5dd;border-radius:17px;padding:23px;margin-bottom:20px;box-shadow:0 2px 8px #13271d08}.cols{display:grid;grid-template-columns:1.25fr 1fr;gap:18px}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.metric{padding:15px;background:#edf2eb;border-radius:12px}.metric small{display:block;color:#627367}.metric strong{font-size:24px;display:block;margin-top:7px}.hero{width:100%;height:300px;object-fit:cover;border-radius:12px}.photos{display:flex;gap:8px;overflow:auto;margin-top:8px}.photos img{height:72px;width:110px;object-fit:cover;border-radius:7px;cursor:pointer}.btn,button,select,input{font:inherit}.btn,button{border:1px solid #ccd8ce;background:#fff;border-radius:9px;padding:9px 12px;cursor:pointer;color:#1c3b2c}button.active,.primary{background:#1d503a;color:white;border-color:#1d503a}button:hover{border-color:#2e7855}.toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:14px}select,input[type=number],input[type=text]{border:1px solid #ccd8ce;border-radius:9px;padding:9px;background:white;max-width:100%}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.comp{border:1px solid #dce4dc;border-radius:13px;padding:16px;background:#fff;cursor:pointer}.comp:hover{border-color:#407b5b}.comp-photo{width:100%;height:170px;object-fit:cover;border-radius:9px;margin-bottom:10px;background:#e6ece5}.comp .price{font-size:24px;font-weight:750;margin:8px 0}.comp small{color:#63766a}.pill{display:inline-block;background:#edf2eb;color:#375642;padding:4px 8px;border-radius:20px;font-size:11px}.compare{overflow:auto}table{border-collapse:collapse;width:100%;font-size:14px}th,td{padding:11px;text-align:left;border-bottom:1px solid #e4eae3}th{background:#f1f5f0}tr.subject{background:#e8f3e8;font-weight:650}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:flex;flex-direction:column;gap:5px}.field label{font-size:12px;color:#627367}.big{font-size:34px;font-weight:780;color:#1a5038}.subtle{font-size:12px;color:#718076}.bar{height:12px;background:#dce6db;border-radius:12px;overflow:hidden}.bar>div{height:100%;background:#387c57}.checkrow{display:flex;gap:12px;align-items:center;justify-content:space-between;padding:11px;border-bottom:1px solid #edf0eb}.checkrow input{accent-color:#276442}.gallery-main{width:100%;height:min(55vw,520px);object-fit:contain;background:#152720;border-radius:12px}.gallery-thumbs{display:flex;gap:8px;overflow-x:auto;padding:9px 0}.gallery-thumbs button{border:2px solid transparent;padding:0;overflow:hidden;flex:0 0 90px;height:70px}.gallery-thumbs button.active{border-color:#2c8a59}.gallery-thumbs img{width:100%;height:100%;object-fit:cover}.gallery-tools{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:8px 0}.detail{background:#f6f8f5;border-radius:12px;padding:15px;margin-top:15px}.warning{border-left:4px solid #c89b45;padding:12px;background:#fff9ed;color:#66532f;font-size:13px}.hidden{display:none!important}footer{color:#738078;font-size:12px;padding:25px 0}.chartrow{display:flex;align-items:center;gap:10px;margin:9px 0;font-size:12px}.chartrow span:first-child{width:130px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.chartrow .bar{flex:1}.chartrow b{width:80px;text-align:right}@media(max-width:850px){.cols,.grid2{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}.metrics{grid-template-columns:repeat(2,1fr)}}@media(max-width:530px){.cards{grid-template-columns:1fr}h1{font-size:23px}.panel{padding:15px}.metric strong{font-size:19px}}
+
+/* Responsive layout: constrain grid children rather than widening the page. */
+html{width:100%;overflow-x:clip;-webkit-text-size-adjust:100%}
+body{width:100%;min-width:0;overflow-x:clip}
+.wrap,.tab,.panel,.cols,.cols>*,.grid2,.grid2>*,.cards,.comp,.metrics,.metric{min-width:0;max-width:100%}
+img{max-width:100%}
+.compare{width:100%;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.compare table{width:max-content;min-width:100%}
+.compare th,.compare td{white-space:nowrap}
+nav{max-width:100%;min-width:0;-webkit-overflow-scrolling:touch;scrollbar-width:thin;overscroll-behavior-x:contain}
+nav button{flex:0 0 auto}
+.photos,.gallery-thumbs{max-width:100%;-webkit-overflow-scrolling:touch}
+@media(max-width:600px){
+ header{padding:16px 16px;display:block;min-width:0}
+ header h1{font-size:clamp(22px,6vw,28px);line-height:1.15;overflow-wrap:anywhere}
+ header>div:last-child{margin-top:9px;text-align:left!important;font-size:12px!important}
+ header small{font-size:10px;letter-spacing:.08em}
+ .wrap{padding:16px 12px 48px;width:100%}
+ nav{gap:8px;padding-bottom:14px;margin-bottom:2px}
+ nav button{padding:10px 13px;font-size:14px}
+ .panel{padding:14px;margin-bottom:14px;border-radius:14px}
+ .cols,.grid2{grid-template-columns:minmax(0,1fr)}
+ .cards{grid-template-columns:minmax(0,1fr)}
+ .metrics{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ .metric{padding:11px}
+ .metric strong{font-size:clamp(15px,4.6vw,20px);overflow-wrap:anywhere}
+ .hero{height:auto;aspect-ratio:4/3;object-fit:cover;display:block}
+ .photos img{width:90px;height:65px;flex:0 0 90px}
+ .comp{padding:12px}
+ .comp-photo{height:auto;aspect-ratio:16/10}
+ .gallery-main{height:auto;max-height:65vh;aspect-ratio:4/3}
+ .gallery-thumbs button{flex-basis:70px;height:55px}
+ .gallery-tools{flex-wrap:wrap;font-size:12px}
+ .gallery-tools button{padding:8px}
+ .toolbar{gap:8px}
+ .toolbar input[type=text],.toolbar select{min-width:0;max-width:100%;width:100%}
+ .big{font-size:clamp(24px,7vw,34px);overflow-wrap:anywhere}
+ .checkrow{gap:8px;align-items:flex-start}
+ .checkrow>*{min-width:0}
+ h2{font-size:21px}
+ .chartrow span:first-child{width:90px;flex:0 0 90px}
+ .chartrow b{width:55px;flex:0 0 55px}
+}
 </style></head><body>
 <header><div><small>PROPERTY INTELLIGENCE · HYGIENE, COLORADO</small><h1>7794 Hygiene Road</h1></div><div style="text-align:right;font-size:13px">Tim & Megan<br><span style="color:#bdd2c4">Working analysis · November 2026</span></div></header>
 <main class="wrap">
